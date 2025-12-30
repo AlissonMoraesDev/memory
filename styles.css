@@ -1,0 +1,137 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #000000;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  overflow-y: hidden;
+}
+
+.game-container {
+  min-width: 544px;
+  max-width: 544px;
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.stats {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.cards-grid {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.card {
+  width: calc(25% - 5px);
+  aspect-ratio: 1;
+  border: 2px solid #5a0caf;
+  background-color: #8235e9;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.revealed {
+  background-color: #ffffff;
+  border-color: #dadada;
+  cursor: not-allowed;
+}
+
+.card-emoji {
+  font-size: 40px;
+  display: none;
+}
+
+.revealed .card-emoji {
+  display: block;
+}
+
+.button {
+  width: 100%;
+  height: 52px;
+  background-color: #8234e9;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #5a0caf;
+  cursor: pointer;
+  font-family: 'Roboto', sans-serif;
+  transition: background-color 0.3s;
+  margin-top: 32px;
+}
+
+.button:hover {
+  background-color: #7029d6;
+}
+
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.active {
+  display: flex;
+  animation: slide-in 1s forwards;
+}
+
+.modal-content-notice {
+  max-width: 544px;
+  min-width: 544px;
+  background-color: #7029d6;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.modal-content-notice h1,
+.modal-content-notice p {
+  color: #dadada;
+}
+
+.modal-content-notice button {
+  margin-top: 12px;
+  background-color: #5a0caf;
+}
+
+.modal-content-notice .button:hover {
+  background-color: #47148f;
+}
