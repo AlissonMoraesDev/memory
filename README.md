@@ -141,7 +141,7 @@ Você só precisa de um navegador moderno! Nenhuma dependência externa é neces
 ## 📁 Project Structure
 
 ```
-memory-game/
+memory/
 ├── .github/
 │   ├── preview.png
 │   └── LICENSE.md
